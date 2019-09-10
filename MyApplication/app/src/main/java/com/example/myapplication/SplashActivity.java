@@ -33,8 +33,10 @@ public class SplashActivity extends AppCompatActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
+                //不需数据，界面跳转
                 Intent intent = new Intent(SplashActivity.this,MainActivity.class);
                 startActivity(intent);
+                 SplashActivity.this.finish();
             }
         };
         timer.schedule(task,5000);
